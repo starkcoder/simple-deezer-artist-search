@@ -1,0 +1,183 @@
+*,*::before,*::after{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Architects Daughter', cursive;
+}
+header{ 
+     height:80px;
+    background-color: rgb(146, 145, 145); 
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+.logo{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background: url("../images/deezer.png") no-repeat;
+    background-size: contain;
+    position:absolute;
+    left: 10px;
+}
+input[type="text"]{
+     width: 400px;
+     height: 30px;
+     outline: none;
+}
+.musician{
+    width: 100%;
+    height: 400px;
+}
+.container{
+    max-width:1000px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height: 400px;
+    margin:auto;
+    flex-wrap:wrap;
+}
+.left-colm{
+    width:50%;
+    height: 400px;
+    background:url("../images/bruno.jpg") no-repeat;
+    background-size:cover;
+}
+.name{
+    width: 300px;
+    height: 200px;
+    z-index: 1000;
+    margin-top:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.artist-name{
+    text-transform:capitalize;
+    font-size: 2rem;
+    color: #fff;
+}
+.artist-fans{
+    margin: 80px 0 0 -100px ;
+    font-size: 1.5rem;
+   position: relative;
+   color: #fff;
+   text-transform: capitalize;
+}
+.artist-fans:hover::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    border: 1px solid red;
+    left: 0;
+    bottom: 0;
+}
+.right-colm{
+    width:40%;
+    height:400px;
+}
+h3{
+    padding: 10px;
+    text-transform: capitalize;
+    text-align: center;
+}
+ol  li{
+    font-size: 2rem;
+    padding:10px 0 20px 0;
+    text-transform: capitalize;
+    position: relative;
+}
+
+ol li::after{
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid black;
+    width:390px;
+    display: block;
+    margin:20px 10px 0 -30px;
+  } 
+  
+.album{
+   width: 100%;
+   height: 200px;
+   margin:50px auto auto auto;
+  }
+  h2{
+      text-transform: capitalize;
+      margin:80px 0 0 150px;
+      font-size: 2rem;
+      text-decoration: underline; 
+  }
+  .flex-album{
+      max-width:800px;
+      height:400px;
+      margin:auto;
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      flex-wrap:wrap;
+  }
+  .card{
+      width:150px ;
+      height: 300px;
+      position: relative;
+      box-shadow: 0 0 10px rgb(124, 111, 111),0 0 4px rgb(27, 18, 18);
+      transition: 180ms;
+  }
+  .card:hover{
+    box-shadow: 0 0 10px rgb(124, 111, 111);
+  }
+  .album-img1{
+    width:150px;
+    height:200px;
+    background:url("../images/bruno-album1.jpg")no-repeat;
+    background-size: cover;
+  }
+  .album-img2{
+    width:150px;
+    height:200px;
+    background:url("../images/bruno-album2.jpg")no-repeat;
+    background-size: cover;
+}
+.album-img3{
+    width:150px;
+    height:200px;
+    background:url("../images/bruno-album3.jpg")no-repeat;
+    background-size: cover;
+    box-shadow:0 0 10px #fff ,0 0 5px #fff;
+}
+.album-img4{
+    width:150px;
+    height:200px;
+    background:url("../images/bruno-album4.jpg")no-repeat;
+    background-size: cover;
+}
+.album-name{
+  width:150px;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  text-transform: capitalize;
+  padding:30px 10px 0 10px;
+}
+.close:hover{
+    color:red;
+}
+@media only screen and (max-width:992px) {
+   input{
+       width: 200px;
+   }
+   .left-colm,.right-colm{
+       width: 100%;
+   }
+   .container{
+       flex-wrap: wrap;
+   }
+   header,.card,.album-img1,.album-img2,.album-img3,.album-img4{ 
+       width: 100%;
+   }
+}
